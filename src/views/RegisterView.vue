@@ -10,9 +10,9 @@ import { useAuthStore } from '@/stores/auth'
 const router = useRouter()
 const auth = useAuthStore()
 const { t } = useI18n()
-const nickname = ref()
-const email = ref()
-const password = ref()
+const nickname = ref('程序员小李')
+const email = ref(`user${Date.now()}@devenglish.ai`)
+const password = ref('devenglish')
 const loading = ref(false)
 const error = ref('')
 

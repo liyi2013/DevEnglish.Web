@@ -23,7 +23,10 @@ export const useLocaleStore = defineStore('locale', () => {
 
     if (params) {
       for (const [name, value] of Object.entries(params)) {
-        text = text.replaceAll(`{${name}}`, String(value))
+        text = text.replace(
+            new RegExp(`\\{${name}\\}`, 'g'),
+            String(value)
+        )
       }
     }
 

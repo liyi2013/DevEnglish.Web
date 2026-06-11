@@ -1,8 +1,12 @@
 import axios from 'axios'
 
-export const apiBaseUrl = import.meta.env.VITE_API_BASE_URL ?? 'http://localhost:5110/api'
-export const apiOrigin = apiBaseUrl.replace(/\/api\/?$/, '')
+//export const apiBaseUrl = import.meta.env.VITE_API_BASE_URL ?? 'http://localhost:5110/api'
+//export const apiOrigin = apiBaseUrl.replace(/\/api\/?$/, '')
 
+export const apiOrigin =
+    import.meta.env.VITE_API_BASE_URL ?? 'http://localhost:5110'
+
+export const apiBaseUrl = `${apiOrigin.replace(/\/$/, '')}/api`
 export const http = axios.create({
     baseURL: apiBaseUrl,
     timeout: 15000,

@@ -10,8 +10,8 @@ import { useAuthStore } from '@/stores/auth'
 const router = useRouter()
 const auth = useAuthStore()
 const { t } = useI18n()
-const email = ref('admin@devenglish.ai')
-const password = ref('devenglish')
+const email = ref()
+const password = ref()
 const loading = ref(false)
 const error = ref('')
 
